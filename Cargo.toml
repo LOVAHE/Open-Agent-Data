@@ -5,6 +5,7 @@ edition = "2024"
 rust-version = "1.88"
 description = "Local token, quota and speed ledger for Claude Code and Codex"
 repository = "https://github.com/LOVAHE/Open-Agent-Data"
+license = "AGPL-3.0-only"
 
 [dependencies]
 aes-gcm = "0.11"
