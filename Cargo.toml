@@ -1,0 +1,29 @@
+[package]
+name = "ai-usage"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.88"
+description = "Local token, quota and speed ledger for Claude Code and Codex"
+repository = "https://github.com/LOVAHE/Open-Agent-Data"
+
+[dependencies]
+aes-gcm = "0.11"
+base64 = "0.23"
+chrono = { version = "0.4", default-features = false, features = ["clock", "std"] }
+dirs = "7"
+ed25519-dalek = "3"
+flate2 = "1"
+getrandom = "0.4"
+serde_json = { version = "1", features = ["preserve_order"] }
+sha2 = "0.11"
+sysinfo = { version = "0.39", default-features = false, features = ["system"] }
+tiny_http = "0.12"
+toml_edit = "0.25"
+ureq = "3"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
